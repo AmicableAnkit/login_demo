@@ -46,7 +46,7 @@ def signin(request):
             login(request,user)
             fname=user.first_name
             lname=user.last_name
-            messages.success(request,'Logged In Successfully')
+            messages.success(request,'You are Logged In Successfully')
             return render(request,'auth_app/index.html', {'fname' : fname +' '+lname})
         else:
             messages.error(request,"Invalid Credential!")
